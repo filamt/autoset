@@ -8,7 +8,16 @@ echo $DBPASS
 
 /usr/bin/mysql_install_db --user=mysql
 
-systemctl start mariadb
+
+
+#부팅시 실행되도록 설정
+if [ $OS = "centos7" ]; then
+	systemctl start mariadb
+else
+	service mysql start
+fi
+
+
 
 
 SECURE_MYSQL=$(expect -c "
