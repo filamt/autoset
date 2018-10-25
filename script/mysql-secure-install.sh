@@ -8,7 +8,7 @@ echo $DBPASS
 
 /usr/bin/mysql_install_db --user=mysql
 
-/usr/bin/mysqld_safe &
+systemctl start mariadb
 
 
 SECURE_MYSQL=$(expect -c "
