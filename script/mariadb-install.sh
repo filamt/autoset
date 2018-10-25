@@ -5,14 +5,8 @@ source "${ROOT_DIR}/includes/function.sh"
 
 title "PHP [${1}] 버전을 설치합니다."
 
-yum_install MariaDB-server MariaDB-client MariaDB-common MariaDB-compat
+yum_install MariaDB-server MariaDB-client
 
 
-if [ $OS = "centos7" ]; then
-  systemctl enable mariadb
-  systemctl start mariadb
-else
-  chkconfig mysql on
-  service mysql start
-fi
+
  

@@ -1,10 +1,5 @@
 [mariadb]
 name=MariaDB
-#baseurl=http://yum.mariadb.org/10.1/centos6-amd64
-#baseurl=http://ftp.kaist.ac.kr/mariadb/yum/10.1/centos6-amd64/
-#gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-MariaDB
-#gpgcheck=1
-
-baseurl = http://yum.mariadb.org/10.1.22/centos6-amd64
+baseurl = http://yum.mariadb.org/10.3/centos6-amd64
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
