@@ -6,7 +6,7 @@ source "${ROOT_DIR}/includes/function.sh"
 
 yum makecache
 yum -y --exclude=kernel* update
-yum_install epel-release yum-utils ntp rdate nmap smartmontools wget openssh-clients
+yum_install epel-release yum-utils ntp rdate nmap smartmontools wget openssh-clients expect
 
 if [ $OS = "centos7" ]; then
   systemctl enable ntpd
