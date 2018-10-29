@@ -27,6 +27,12 @@ cmd_once "script/edit-config-http.sh"
 
 #http 실행
 service httpd restart
+<<<<<<< HEAD
+=======
+
+#mysql 초기 비번 설정(default.conf에 설정)
+cmd_once "script/mysql-secure-install.sh"
+>>>>>>> 5cdb0b6899e7a9f2d2a7606a60d0e29d9c1cafc6
 
 #mysql 초기 비번 설정(default.conf에 설정)
 cmd_once "script/mysql-secure-install.sh"

@@ -2,7 +2,11 @@
 
 ROOT_DIR=$( dirname $( cd "$( dirname "$0" )" && pwd ) )
 source "${ROOT_DIR}/includes/function.sh"
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 5cdb0b6899e7a9f2d2a7606a60d0e29d9c1cafc6
 
 echo $DBPASS
 
@@ -19,6 +23,10 @@ fi
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5cdb0b6899e7a9f2d2a7606a60d0e29d9c1cafc6
 SECURE_MYSQL=$(expect -c "
 set timeout 3
 spawn mysql_secure_installation

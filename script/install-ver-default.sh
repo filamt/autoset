@@ -14,20 +14,31 @@ if [ $OS = "centos7" ]; then
 	if [ $MARIADB = "0" ]; then
 			yum_install mariadb mariadb-server
 	else
+<<<<<<< HEAD
 			cmd_once "script/mariadb-repo-install.sh"
 			cmd_once "script/mariadb-install.sh"
+=======
+			cmd_once "scripts/mariadb-repo-install.sh"
+			cmd_once "scripts/mariadb-install.sh"
+>>>>>>> 5cdb0b6899e7a9f2d2a7606a60d0e29d9c1cafc6
 	fi
 else
 	if [ $MARIADB = "0" ]; then
 		yum_install mysql-server mysql
 	else
+<<<<<<< HEAD
 		cmd_once "script/mariadb-repo-install.sh"
 		cmd_once "script/mariadb-install.sh"
+=======
+		cmd_once "scripts/mariadb-repo-install.sh"
+		cmd_once "scripts/mariadb-install.sh"
+>>>>>>> 5cdb0b6899e7a9f2d2a7606a60d0e29d9c1cafc6
 	fi
 fi
 
 
 #php 설치
+<<<<<<< HEAD
 if [ PHP_VERSION = "0" ]; then
 	yum_install php php-devel php-pear php-mysql php-mbstring php-gd
 else
@@ -36,6 +47,11 @@ else
 fi
 
  
+=======
+yum_install php php-devel php-pear php-mysql php-mbstring php-gd
+
+
+>>>>>>> 5cdb0b6899e7a9f2d2a7606a60d0e29d9c1cafc6
 #부팅시 실행되도록 설정
 if [ $OS = "centos7" ]; then
 	systemctl enable httpd
@@ -44,5 +60,10 @@ else
 	chkconfig httpd on
 	chkconfig mysql on
 fi
+<<<<<<< HEAD
 
  
+=======
+
+
+>>>>>>> 5cdb0b6899e7a9f2d2a7606a60d0e29d9c1cafc6
