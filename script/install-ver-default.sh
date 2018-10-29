@@ -41,7 +41,7 @@ if [ $OS = "centos7" ]; then
 	systemctl enable httpd
 	systemctl enable mariadb
 else
-	chkconfig httpd on 
+	chkconfig httpd on  
 	chkconfig mysqld on
 fi
 

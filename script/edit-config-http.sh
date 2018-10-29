@@ -10,6 +10,7 @@ source "${ROOT_DIR}/includes/function.sh"
 cp /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf.ori
 sed -i 's/KeepAlive Off/KeepAlive On/' /etc/httpd/conf/httpd.conf
 sed -i 's/#ServerName www.example.com:80/ServerName 127.0.0.0:80/' /etc/httpd/conf/httpd.conf
+sed -i 's/#NameVirtualHost *:80/NameVirtualHost *:80/' /etc/httpd/conf/httpd.conf
 sed -i 's/AddDefaultCharset UTF-8/#AddDefaultCharset UTF-8/' /etc/httpd/conf/httpd.conf
 
 sed -i 's/DirectoryIndex index.html/DirectoryIndex index.html index.php/' /etc/httpd/conf/httpd.conf
@@ -52,3 +53,4 @@ fi
 exit 0   
  
 
+ 
