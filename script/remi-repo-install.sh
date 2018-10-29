@@ -20,4 +20,4 @@ yum -y --enablerepo=remi update remi-release
 yum-config-manager --enable remi | grep -P '\[remi|enabled ='
 yum-config-manager --save --setopt=remi.exclude="php-* mysql-*" | grep -P '\[remi\]|exclude = php'
 yum makecache
- 
+  

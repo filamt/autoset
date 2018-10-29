@@ -10,4 +10,4 @@ if [ ! -f /etc/yum.repos.d/MariaDB.repo ]; then
     cp -av "${ROOT_DIR}/mariadb/centos6/MariaDB.repo" /etc/yum.repos.d/
   fi
 fi
-  
+   

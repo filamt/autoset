@@ -14,15 +14,12 @@ sed -i 's/AddDefaultCharset UTF-8/#AddDefaultCharset UTF-8/' /etc/httpd/conf/htt
 
 sed -i 's/DirectoryIndex index.html/DirectoryIndex index.html index.php/' /etc/httpd/conf/httpd.conf
 
-<<<<<<< HEAD
 #html에서 php 실행되도록
 echo "
 AddType application/x-httpd-php .php .html
 AddType application/x-httpd-php-source .phps " >> /etc/httpd/conf/httpd.conf
 
 
-=======
->>>>>>> 5cdb0b6899e7a9f2d2a7606a60d0e29d9c1cafc6
 echo "
 <Directory /home/*/public_html>
     AllowOverride All
@@ -37,21 +34,12 @@ sed -i 's/;date.timezone =/date.timezone = "Asia\/Seoul"/' /etc/php.ini
 sed -i 's/allow_call_time_pass_reference = Off/allow_call_time_pass_reference = On/' /etc/php.ini
 sed -i 's/expose_php = On/expose_php = Off/' /etc/php.ini
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 5cdb0b6899e7a9f2d2a7606a60d0e29d9c1cafc6
 #mysql
 cp /etc/my.cnf /etc/my.cnf.ori
 yes | cp -av "${ROOT_DIR}/mariadb/centos7/my.cnf" /etc/my.cnf
 
 
-<<<<<<< HEAD
 exit 0   
- 
+  
 # 주의  /autoset/includes/function.sh: line 33: script/edit-config-http.sh: 허가 거부
 #다음 명령이 실패하여, 설치가 중단되었습니다. (exit code: 126)
-=======
-
-exit 0 
->>>>>>> 5cdb0b6899e7a9f2d2a7606a60d0e29d9c1cafc6
