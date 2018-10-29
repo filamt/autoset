@@ -40,9 +40,15 @@ cp /etc/my.cnf /etc/my.cnf.ori
 if [ $OS = "centos7" ]; then
 	yes | cp -av "${ROOT_DIR}/mariadb/centos7/my.cnf" /etc/my.cnf
 else
-	yes | cp -av "${ROOT_DIR}/mariadb/centos6/my.cnf" /etc/my.cnf
+	if [ $MARIADB = "0" ]; then 
+			yes | cp -av "${ROOT_DIR}/mariadb/centos6/my51.cnf" /etc/my.cnf
+	else
+			yes | cp -av "${ROOT_DIR}/mariadb/centos6/my.cnf" /etc/my.cnf
+	fi
+
 fi
 
 
 exit 0   
-  
+ 
+

@@ -24,7 +24,7 @@ cmd_once "script/remi-repo-install.sh"
 #default config 파일 수정
 cmd_once "script/edit-config-http.sh"
 
-
+ 
 #http 실행
 service httpd restart
 
