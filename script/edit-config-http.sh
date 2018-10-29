@@ -40,6 +40,6 @@ yes | cp -av "${ROOT_DIR}/mariadb/centos7/my.cnf" /etc/my.cnf
 
 
 exit 0   
-
+ 
 # 주의  /autoset/includes/function.sh: line 33: script/edit-config-http.sh: 허가 거부
 #다음 명령이 실패하여, 설치가 중단되었습니다. (exit code: 126)

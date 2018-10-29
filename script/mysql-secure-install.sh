@@ -19,7 +19,6 @@ fi
 
 
 
-
 SECURE_MYSQL=$(expect -c "
 set timeout 3
 spawn mysql_secure_installation
