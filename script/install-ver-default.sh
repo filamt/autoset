@@ -35,7 +35,7 @@ else
 	yum_install php php-devel php-pear php-mysql php-mbstring php-gd
 fi
 
-
+  
 #부팅시 실행되도록 설정
 if [ $OS = "centos7" ]; then
 	systemctl enable httpd
@@ -47,5 +47,7 @@ else
 		chkconfig mysqld on
 	else
 		chkconfig mysql on
+	fi
 fi
+
   
