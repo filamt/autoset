@@ -35,14 +35,17 @@ else
 	yum_install php php-devel php-pear php-mysql php-mbstring php-gd
 fi
 
-  
+
 #부팅시 실행되도록 설정
 if [ $OS = "centos7" ]; then
 	systemctl enable httpd
 	systemctl enable mariadb
 else
 	chkconfig httpd on  
-	chkconfig mysqld on
-fi
 
+	if [ $MARIADB = "0" ]; then
+		chkconfig mysqld on
+	else
+		chkconfig mysql on
+fi
   
