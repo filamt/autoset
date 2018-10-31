@@ -21,7 +21,7 @@ fi
 #domain check
 VHOST_CNT=find /etc/httpd/conf.d/vhost.conf | xargs grep '$3' | wc -l
 
-echo "vhost_cnt=$VHOST_CNT"
+#echo "vhost_cnt=$VHOST_CNT"
 #exit 1;
 
 #make id
@@ -53,4 +53,4 @@ echo "
 /usr/sbin/apachectl restart 2>&1
 
 
-exit;
+exit 0 ;
