@@ -13,7 +13,11 @@ echo $DBPASS
 if [ $OS = "centos7" ]; then
 	systemctl start mariadb
 else
-	service mysqld start
+	if [ $MARIADB = "0" ]; then
+		service mysqld start
+	else
+		service mysql start
+	fi
 fi
 
 
