@@ -1,5 +1,4 @@
 [mysqld]
-default-character-set=euckr
 character-set-server=euckr
 collation-server = euckr_korean_ci
 
