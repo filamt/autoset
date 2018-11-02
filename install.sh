@@ -30,4 +30,9 @@ service httpd restart
 
 #mysql 초기 비번 설정(default.conf에 설정)
 cmd_once "script/mysql-secure-install.sh"
- 
+
+
+#wordpress 자동 설치용 tool 설치
+cmd_once "script/wpcli-setup.sh"
+
+

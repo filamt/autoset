@@ -19,7 +19,7 @@ fi
     fi
 
 #domain check
-VHOST_CNT=find /etc/httpd/conf.d/vhost.conf | xargs grep '$3' | wc -l
+#VHOST_CNT=find /etc/httpd/conf.d/vhost.conf | xargs grep '$3' | wc -l
 
 #echo "vhost_cnt=$VHOST_CNT"
 #exit 1;
@@ -51,6 +51,16 @@ echo "
 " >> /etc/httpd/conf.d/vhost.conf
 
 /usr/sbin/apachectl restart 2>&1
+
+
+
+###############################################
+###   wordpress 자동설치   #######################
+###############################################
+
+sudo -u $1 -i /usr/local/bin/wp core download --path=/home/$1/public_html --locale=ko_KR
+sudo -u $1 -i /usr/local/bin/wp config create --dbname=$1 --dbuser=$1 --dbpass=$2 --dbhost=localhost --dbprefix=wp_
+sudo -u $1 -i /usr/local/bin/wp core install --url=$3 --title="팔만볼트" --admin_user=$1 --admin_password=$2 --admin_email='j.choi@filamt.com' --path=/home/$1/public_html
 
 
 exit 0 ;
